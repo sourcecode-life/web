@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "源代碼人生",
+    "description": "你的人生可以編程。重寫你的源代碼，升級你的生命。"
+  },
+  "nav": {
+    "home": "首頁",
+    "what": "是什麼",
+    "how": "怎麼做"
+  },
+  "hero": {
+    "tagline": "你的人生可以編程",
+    "subtitle": "重寫你的源代碼，升級你的生命。",
+    "cta": "探索核心理念"
+  },
+  "concepts": {
+    "title": "核心理念",
+    "appVsLife": {
+      "title": "應用與人生：雙層模型",
+      "description": "你不會在界面層修復應用程式。你會去修改源代碼。人生也是如此。正如應用運行在作業系統之上，我們的行為也運行在更深層的生命模式之上。"
+    },
+    "fur": {
+      "title": "FUR：內在進化模型",
+      "subtitle": "修復 → 升級 → 運行",
+      "description": "中文的「修行」一詞，由「修」（修復）和「行」（運行）組成——這與軟體升級的過程驚人地相似。"
+    },
+    "quantumReality": {
+      "title": "現實是編譯後的代碼",
+      "description": "應用程式由<span class=\"text-green-400\">二進位</span>代碼構建。現實由<span class=\"text-green-400\">量子</span>代碼（能量）編譯而成。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 源代碼人生",
+    "tagline": "重寫你的源代碼，升級你的生命。"
+  }
+}

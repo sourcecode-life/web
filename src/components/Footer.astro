@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="border-t border-gray-800 py-8 px-4">
+  <div class="container mx-auto max-w-6xl text-center">
+    <p class="text-green-400 font-mono text-sm mb-2">
+      ~/sourcecode.life
+    </p>
+    <p class="text-gray-500 text-sm">
+      {lang === 'en' && <>Rewrite your <span class="text-green-400">source code</span>. Upgrade your <span class="text-green-400">life</span>.</>}
+      {lang === 'zh-hans' && <>重写你的<span class="text-green-400">源代码</span>，升级你的<span class="text-green-400">生命</span>。</>}
+      {lang === 'zh-hant' && <>重寫你的<span class="text-green-400">源代碼</span>，升級你的<span class="text-green-400">生命</span>。</>}
+    </p>
+    <p class="text-gray-600 text-xs mt-4">
+      {t('footer.copyright')}
+    </p>
+  </div>
+</footer>

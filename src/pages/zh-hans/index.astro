@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('zh-hans');
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center pt-16 px-4">
+    <div class="text-center max-w-4xl">
+      <div class="mb-6 animate-float">
+        <span class="text-6xl">{ }</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <span class="text-green-400 font-mono">&lt;</span>
+        <span class="cursor-blink">{t('hero.tagline')}</span>
+        <span class="text-green-400 font-mono">/&gt;</span>
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+        重写你的<span class="text-green-400">源代码</span>，升级你的<span class="text-green-400">生命</span>。
+      </p>
+    </div>
+  </section>
+
+  <!-- Concepts Section -->
+  <section id="concepts" class="py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="space-y-16">
+        <!-- Quantum Reality -->
+        <div id="what" class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
+            {t('concepts.quantumReality.title')}
+          </h3>
+          <p class="text-gray-300 text-base leading-relaxed mb-6" set:html={t('concepts.quantumReality.description')} />
+          <div class="rounded-lg overflow-hidden">
+            <img src="/images/quantum-reality.svg" alt="现实是编译后的代码" class="w-full h-auto max-w-2xl mx-auto rounded-lg" />
+          </div>
+        </div>
+
+        <!-- App vs Life -->
+        <div class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
+            {t('concepts.appVsLife.title')}
+          </h3>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            {t('concepts.appVsLife.description')}
+          </p>
+          <div class="rounded-lg p-4 overflow-hidden">
+            <img src="/images/app-vs-life.svg" alt="应用与人生双层模型" class="w-full h-auto max-w-2xl mx-auto" />
+          </div>
+        </div>
+
+        <!-- FUR Model -->
+        <div id="how" class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
+            {t('concepts.fur.title')}
+          </h3>
+          <div class="mb-4 p-3 bg-gray-900/60 rounded font-mono text-base inline-block">
+            <span class="text-yellow-400">修复</span>
+            <span class="text-gray-500"> → </span>
+            <span class="text-green-400">升级</span>
+            <span class="text-gray-500"> → </span>
+            <span class="text-blue-400">运行</span>
+          </div>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            {t('concepts.fur.description')}
+          </p>
+          <div class="rounded-lg p-4 overflow-hidden">
+            <img src="/images/fur-model.svg" alt="FUR内在进化模型" class="w-full h-auto max-w-2xl mx-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

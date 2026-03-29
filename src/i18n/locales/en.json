@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "SourceCode.Life",
+    "description": "Your life is programmable. Rewrite your source code. Upgrade your life."
+  },
+  "nav": {
+    "home": "Home",
+    "what": "What",
+    "how": "How"
+  },
+  "hero": {
+    "tagline": "Your life is programmable",
+    "subtitle": "Rewrite your source code. Upgrade your life.",
+    "cta": "Explore Concepts"
+  },
+  "concepts": {
+    "title": "Core Concepts",
+    "appVsLife": {
+      "title": "App vs. Life: A Two-Layer Model",
+      "description": "You don't fix an app at the interface. You fix it in the source code. Life is no different. Just as apps run on operating systems, our behaviors run on deeper life patterns."
+    },
+    "fur": {
+      "title": "FUR: The Inner Evolution Model",
+      "subtitle": "Fix → Upgrade → Run",
+      "description": "The Chinese term for spiritual practice, \"修行\", combines \"修\" (to fix) and \"行\" (to run) — closely mirroring the process of upgrading software."
+    },
+    "quantumReality": {
+      "title": "Reality as Compiled Code",
+      "description": "Apps are built from <span class=\"text-green-400\">binary</span> code. Reality is compiled from <span class=\"text-green-400\">quantum</span> code (energy)."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 SourceCode.Life",
+    "tagline": "Rewrite your source code. Upgrade your life."
+  }
+}

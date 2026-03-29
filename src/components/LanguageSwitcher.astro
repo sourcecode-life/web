@@ -1,0 +1,41 @@
+---
+import { getLangFromUrl, languages } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+function getPathForLang(lang: string): string {
+  let path = currentPath;
+  for (const l of Object.keys(languages)) {
+    if (path.startsWith(`/${l}/`) || path === `/${l}`) {
+      path = path.slice(l.length + 1) || '/';
+      break;
+    }
+  }
+  return lang === 'en' ? (path || '/') : `/${lang}${path === '/' ? '' : path}`;
+}
+---
+
+<div class="relative group">
+  <button
+    class="flex items-center gap-2 px-3 py-1.5 rounded border border-gray-600 hover:border-green-400 transition-colors text-sm"
+    aria-label="Select language"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+    </svg>
+    <span class="hidden sm:inline">{languages[currentLang]}</span>
+  </button>
+  <div class="absolute right-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-700 z-50">
+    {Object.entries(languages).map(([code, name]) => (
+      <a
+        href={getPathForLang(code)}
+        class={`block px-4 py-2 text-sm hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg transition-colors ${
+          code === currentLang ? 'text-green-400 bg-gray-700/50' : 'text-gray-200'
+        }`}
+      >
+        {name}
+      </a>
+    ))}
+  </div>
+</div>

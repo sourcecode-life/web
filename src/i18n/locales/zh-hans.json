@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "源代码人生",
+    "description": "你的人生可以编程。重写你的源代码，升级你的生命。"
+  },
+  "nav": {
+    "home": "首页",
+    "what": "是什么",
+    "how": "怎么做"
+  },
+  "hero": {
+    "tagline": "你的人生可以编程",
+    "subtitle": "重写你的源代码，升级你的生命。",
+    "cta": "探索核心理念"
+  },
+  "concepts": {
+    "title": "核心理念",
+    "appVsLife": {
+      "title": "应用与人生：双层模型",
+      "description": "你不会在界面层修复应用程序。你会去修改源代码。人生也是如此。正如应用运行在操作系统之上，我们的行为也运行在更深层的生命模式之上。"
+    },
+    "fur": {
+      "title": "FUR：内在进化模型",
+      "subtitle": "修复 → 升级 → 运行",
+      "description": "中文的「修行」一词，由「修」（修复）和「行」（运行）组成——这与软件升级的过程惊人地相似。"
+    },
+    "quantumReality": {
+      "title": "现实是编译后的代码",
+      "description": "应用程序由<span class=\"text-green-400\">二进制</span>代码构建。现实由<span class=\"text-green-400\">量子</span>代码（能量）编译而成。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 源代码人生",
+    "tagline": "重写你的源代码，升级你的生命。"
+  }
+}
