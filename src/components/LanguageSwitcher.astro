@@ -16,17 +16,22 @@ function getPathForLang(lang: string): string {
 }
 ---
 
-<div class="relative group">
+<div class="relative" id="lang-switcher">
   <button
-    class="flex items-center gap-2 px-3 py-1.5 rounded border border-gray-600 hover:border-green-400 transition-colors text-sm"
+    id="lang-btn"
+    class="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 rounded border border-gray-600 hover:border-green-400 transition-colors text-sm"
     aria-label="Select language"
+    aria-expanded="false"
   >
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
     </svg>
     <span class="hidden sm:inline">{languages[currentLang]}</span>
   </button>
-  <div class="absolute right-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-700 z-50">
+  <div
+    id="lang-dropdown"
+    class="absolute right-0 mt-2 w-36 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 border border-gray-700 z-50"
+  >
     {Object.entries(languages).map(([code, name]) => (
       <a
         href={getPathForLang(code)}
@@ -39,3 +44,32 @@ function getPathForLang(lang: string): string {
     ))}
   </div>
 </div>
+
+<script>
+  const btn = document.getElementById('lang-btn');
+  const dropdown = document.getElementById('lang-dropdown');
+
+  if (btn && dropdown) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('opacity-100');
+      if (isOpen) {
+        dropdown.classList.remove('opacity-100', 'visible');
+        dropdown.classList.add('opacity-0', 'invisible');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        dropdown.classList.remove('opacity-0', 'invisible');
+        dropdown.classList.add('opacity-100', 'visible');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target as Node) && !btn.contains(e.target as Node)) {
+        dropdown.classList.remove('opacity-100', 'visible');
+        dropdown.classList.add('opacity-0', 'invisible');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
