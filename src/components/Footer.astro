@@ -7,22 +7,8 @@ const t = useTranslations(lang);
 
 <footer class="border-t border-gray-800 py-8 px-4">
   <div class="container mx-auto max-w-6xl flex flex-col md:flex-row md:justify-between md:items-start gap-6">
-    <!-- Left side -->
-    <div class="text-left">
-      <p class="text-sm mb-2">
-        <span class="text-gray-500">{lang === 'en' ? 'Contact: ' : '联系：'}</span><a href="mailto:rewrite@sourcecode.life" class="text-green-400 font-mono hover:text-white transition-colors">rewrite@sourcecode.life</a>
-      </p>
-      <p class="text-gray-500 text-sm">
-        {lang === 'en' && <>Rewrite your <span class="text-green-400">source code</span>. Upgrade your <span class="text-green-400">life</span>.</>}
-        {lang === 'zh-hans' && <>重写你的<span class="text-green-400">源代码</span>，升级你的<span class="text-green-400">生命</span>。</>}
-        {lang === 'zh-hant' && <>重寫你的<span class="text-green-400">源代碼</span>，升級你的<span class="text-green-400">生命</span>。</>}
-      </p>
-      <p class="text-gray-600 text-xs mt-2">
-        {t('footer.copyright')}
-      </p>
-    </div>
-    <!-- Right side -->
-    <div class="text-left md:text-right text-purple-400 text-sm leading-relaxed">
+    <!-- Poem (shown first on mobile, right side on desktop) -->
+    <div class="order-first md:order-last text-left md:text-right text-purple-400 text-sm leading-relaxed">
       {lang === 'en' && (
         <>
           <p>All is energy.</p>
@@ -47,6 +33,20 @@ const t = useTranslations(lang);
           <p>修行改源碼</p>
         </>
       )}
+    </div>
+    <!-- Contact & copyright (shown second on mobile, left side on desktop) -->
+    <div class="order-last md:order-first text-left">
+      <p class="text-sm mb-2">
+        <span class="text-gray-500">{lang === 'en' ? 'Contact: ' : '联系：'}</span><a href="mailto:rewrite@sourcecode.life" class="text-green-400 font-mono hover:text-white transition-colors">rewrite@sourcecode.life</a>
+      </p>
+      <p class="text-gray-500 text-sm">
+        {lang === 'en' && <>Rewrite your <span class="text-green-400">source code</span>. Upgrade your <span class="text-green-400">life</span>.</>}
+        {lang === 'zh-hans' && <>重写你的<span class="text-green-400">源代码</span>，升级你的<span class="text-green-400">生命</span>。</>}
+        {lang === 'zh-hant' && <>重寫你的<span class="text-green-400">源代碼</span>，升級你的<span class="text-green-400">生命</span>。</>}
+      </p>
+      <p class="text-gray-600 text-xs mt-2">
+        {t('footer.copyright')}
+      </p>
     </div>
   </div>
 </footer>
