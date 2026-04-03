@@ -23,12 +23,22 @@ const t = useTranslations('zh-hans');
     </div>
   </section>
 
+  <!-- Hook Sentence -->
+  <section id="what" class="py-16 px-4 text-center scroll-mt-20">
+    <div class="max-w-3xl mx-auto relative">
+      <span class="text-5xl md:text-6xl text-green-400/20 absolute -top-6 -left-2 font-serif select-none">"</span>
+      <p class="text-2xl md:text-3xl text-gray-300 italic leading-relaxed font-light" set:html={t('hook.sentence')} />
+      <span class="text-5xl md:text-6xl text-green-400/20 absolute -bottom-8 -right-2 font-serif select-none">"</span>
+      <div class="mt-6 w-16 h-px bg-gradient-to-r from-transparent via-green-400/50 to-transparent mx-auto"></div>
+    </div>
+  </section>
+
   <!-- Concepts Section -->
   <section id="concepts" class="py-20 px-4">
     <div class="container mx-auto max-w-6xl">
       <div class="space-y-16">
         <!-- Quantum Reality -->
-        <div id="what" class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
+        <div class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
           <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
             {t('concepts.quantumReality.title')}
           </h3>
@@ -49,8 +59,19 @@ const t = useTranslations('zh-hans');
           </div>
         </div>
 
-        <!-- FUR Model -->
+        <!-- Meditation -->
         <div id="how" class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
+            {t('concepts.meditation.title')}
+          </h3>
+          <p class="text-gray-300 text-base leading-relaxed mb-6" set:html={t('concepts.meditation.description')} />
+          <div class="rounded-lg p-4 overflow-hidden">
+            <img src="/images/meditation-zh.svg" alt="冥想——调试自我的源代码" class="w-full h-auto max-w-2xl mx-auto" />
+          </div>
+        </div>
+
+        <!-- FUR Model -->
+        <div class="bg-gray-800/50 rounded-xl p-6 md:p-8 border border-gray-700 scroll-mt-20">
           <h3 class="text-xl sm:text-2xl font-bold mb-4 text-green-400">
             {t('concepts.fur.title')}
           </h3>

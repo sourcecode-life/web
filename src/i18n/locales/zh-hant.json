@@ -1,38 +1,45 @@
 {
   "site": {
-    "title": "源代碼人生",
-    "description": "你的人生可以編程。重寫你的源代碼，升級你的生命。"
+    "title": "改寫你的人生源代碼",
+    "description": "你的人生是可編程的。重寫你的源代碼，升級你的生命。"
   },
   "nav": {
     "home": "首頁",
-    "what": "是什麼",
-    "why": "為什麼",
-    "how": "怎麼做",
+    "what": "理念",
+    "why": "原理",
+    "how": "方法",
     "goal": "目標"
   },
   "hero": {
-    "tagline": "你的人生可以編程",
+    "tagline": "你的人生是可編程的",
     "subtitle": "重寫你的源代碼，升級你的生命。",
     "cta": "探索核心理念"
+  },
+  "hook": {
+    "sentence": "你是否相信現實可能是场模擬遊戲——就像<a href=\"https://en.wikipedia.org/wiki/The_Matrix\" target=\"_blank\" class=\"text-green-400 hover:text-white transition-colors\">《駭客任務》</a>？"
   },
   "concepts": {
     "title": "核心理念",
     "appVsLife": {
       "title": "修復源代碼，而非界面",
-      "description": "你不會在界面層修復應用程式。你會去修改源代碼。人生也是如此。<br><br>要轉化你的現實，你必須重寫自我的底層代碼——<span class=\"text-green-400\">靈魂的量子代碼</span>。"
+      "description": "你不會在界面層修復應用程式，而是去修改源代碼。人生也是如此。<br><br>要轉化你的現實，你必須重寫自我的底層源代碼——<span class=\"text-purple-400\">靈魂</span>。"
     },
     "fur": {
-      "title": "FUR：內在進化循環",
+      "title": "FUR：內在進化循環模型",
       "subtitle": "修復 → 升級 → 運行",
       "description": "中文的「修行」一詞，由「修」（修復）和「行」（運行）組成——這與軟體升級的過程驚人地相似。"
     },
+    "meditation": {
+      "title": "冥想 —— 調試灵魂源代碼",
+      "description": "冥想是靈魂的調試器。與其修復表面的壓力、焦慮和症狀，不如深入內在，直達<span class=\"text-purple-400\">自我的源代碼</span>。修復限制性信念，移除有害循環，將內在狀態設置為 <span class=\"text-green-400 font-mono\">calm = true</span>。"
+    },
     "quantumReality": {
-      "title": "現實是編譯後的代碼",
+      "title": "現實是能量編碼而成",
       "description": "應用程式由<span class=\"text-green-400\">二進位</span>代碼構建。現實由<span class=\"text-green-400\">量子</span>代碼（能量）編譯而成。"
     },
     "hawkins": {
       "title": "內在進化的度量",
-      "description": "霍金斯能量層級將意識量化為能量等級。<span class=\"text-yellow-400 font-semibold\">Fix</span> 清除低層狀態，<span class=\"text-green-400 font-semibold\">Upgrade</span> 提升你的層級，<span class=\"text-blue-400 font-semibold\">Run</span> 將結果表達為體驗。"
+      "description": "《霍金斯能量層級表》將意識量化為能量等級。<span class=\"text-yellow-400 font-semibold\">Fix</span> 清除低層狀態，<span class=\"text-green-400 font-semibold\">Upgrade</span> 提升你的層級，<span class=\"text-blue-400 font-semibold\">Run</span> 將灵魂能量显化為現實的人生體驗。"
     }
   },
   "footer": {

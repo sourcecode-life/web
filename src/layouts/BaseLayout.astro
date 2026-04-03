@@ -51,11 +51,71 @@ const hreflangs = Object.keys(languages).map((l) => ({
     <link rel="canonical" href={url.href} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body class="min-h-screen bg-black text-white">
+    <canvas id="matrix-bg" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    <div class="relative z-10">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+
+    <script>
+      const canvas = document.getElementById('matrix-bg') as HTMLCanvasElement;
+      const ctx = canvas.getContext('2d')!;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      // Quantum code symbols: qubits, superposition, gates, binary
+      const chars = '|0⟩|1⟩|+⟩|−⟩⟨ψ|Φ⟩01αβ∧⊗⊕∑∫∂ℏΔπ∞≡≈';
+      const fontSize = 14;
+      const speed = 0.3;
+      let columns = Math.floor(canvas.width / fontSize);
+      let drops: number[] = Array(columns).fill(0).map(() => Math.random() * -100);
+
+      window.addEventListener('resize', () => {
+        columns = Math.floor(canvas.width / fontSize);
+        drops = Array(columns).fill(0).map(() => Math.random() * -100);
+      });
+
+      function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = `${fontSize}px monospace`;
+
+        for (let i = 0; i < drops.length; i++) {
+          // Only render ~40% of columns for a sparser look
+          if (i % 3 !== 0) {
+            drops[i] += speed;
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+              drops[i] = 0;
+            }
+            continue;
+          }
+
+          const char = chars[Math.floor(Math.random() * chars.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+
+          ctx.fillStyle = `rgba(74, 222, 128, ${0.08 + Math.random() * 0.07})`;
+          ctx.fillText(char, x, y);
+
+          if (y > canvas.height && Math.random() > 0.98) {
+            drops[i] = 0;
+          }
+          drops[i] += speed;
+        }
+
+        requestAnimationFrame(draw);
+      }
+      draw();
+    </script>
   </body>
 </html>

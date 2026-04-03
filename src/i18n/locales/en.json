@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "SourceCode.Life",
+    "title": "Rewrite the Source Code of Your Life",
     "description": "Your life is programmable. Rewrite your source code. Upgrade your life."
   },
   "nav": {
@@ -15,16 +15,23 @@
     "subtitle": "Rewrite your source code. Upgrade your life.",
     "cta": "Explore Concepts"
   },
+  "hook": {
+    "sentence": "Do you believe reality could be a simulation—like <a href=\"https://en.wikipedia.org/wiki/The_Matrix\" target=\"_blank\" class=\"text-green-400 hover:text-white transition-colors\">The Matrix</a>?"
+  },
   "concepts": {
     "title": "Core Concepts",
     "appVsLife": {
       "title": "Fix the Source Code, Not the Interface",
-      "description": "You don't fix an app at the interface. You fix it in the source code. Life is no different.<br><br>To transform your reality, you must rewrite the underlying code of the self—the <span class=\"text-green-400\">quantum code of the soul</span>."
+      "description": "You don't fix an app at the interface. You fix it in the source code. Life is no different.<br><br>To transform your reality, you must rewrite the underlying source code of the self—the <span class=\"text-purple-400\">soul</span>."
     },
     "fur": {
       "title": "FUR: The Inner Evolution Loop",
       "subtitle": "Fix → Upgrade → Run",
-      "description": "The Chinese term for spiritual practice, \"修行\", combines \"修\" (to fix) and \"行\" (to run) — closely mirroring the process of upgrading software."
+      "description": "\"修行\"—the Chinese term for spiritual practice (e.g., meditation)—literally means fix the code, then run it, mirroring how software is upgraded."
+    },
+    "meditation": {
+      "title": "Meditation — Debugging the Source Code of the Self",
+      "description": "Meditation is the debugger of the soul. Instead of fixing the surface — stress, anxiety, symptoms — you go inward, to the <span class=\"text-purple-400\">source code of the self</span>. Patch limiting beliefs, remove toxic loops, and set your inner state to <span class=\"text-green-400 font-mono\">calm = true</span>."
     },
     "quantumReality": {
       "title": "Reality as Compiled Code",
@@ -32,7 +39,7 @@
     },
     "hawkins": {
       "title": "The Metrics of Inner Evolution",
-      "description": "The Hawkins Scale measures consciousness as energy levels. <span class=\"text-yellow-400 font-semibold\">Fix</span> clears lower states, <span class=\"text-green-400 font-semibold\">Upgrade</span> raises your level, and <span class=\"text-blue-400 font-semibold\">Run</span> expresses the result in experience."
+      "description": "The Hawkins Scale measures consciousness as energy levels. <span class=\"text-yellow-400 font-semibold\">Fix</span> clears lower states, <span class=\"text-green-400 font-semibold\">Upgrade</span> raises your level, and <span class=\"text-blue-400 font-semibold\">Run</span> manifests the reality in life experience."
     }
   },
   "footer": {
