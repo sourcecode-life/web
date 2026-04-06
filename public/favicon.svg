@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="bracketLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="bracketRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#a78bfa" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#e0e7ff" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#c4b5fd" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="orbFilter">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="200" fill="url(#bg)"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="512" cy="512" r="120" fill="url(#orbGlow)" opacity="0.5"/>
+
+  <!-- Left bracket < -->
+  <path d="M 380,350 L 260,512 L 380,674" fill="none" stroke="url(#bracketLeft)" stroke-width="55" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Right bracket > -->
+  <path d="M 644,350 L 764,512 L 644,674" fill="none" stroke="url(#bracketRight)" stroke-width="55" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Central orb glow -->
+  <circle cx="512" cy="512" r="65" fill="url(#orbGlow)" filter="url(#orbFilter)"/>
+  <!-- Central orb core -->
+  <circle cx="512" cy="512" r="35" fill="url(#orbCore)"/>
+  <!-- Orb highlight -->
+  <circle cx="504" cy="502" r="14" fill="white" opacity="0.4"/>
+</svg>
